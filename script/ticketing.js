@@ -85,7 +85,7 @@ const selected = [];
 let seatNumbers;
 for(const item of seatContainBox){
     item.addEventListener("click", (e) => {
-        if(e.target.classList[0] === "btn" && selected.length <= 4){
+        if(e.target.classList[0] === "btn" && selected.length <= 3){
             e.target.classList.add("bg-[#1DD100]");
             if(selected.includes(e.target.innerText)){
                alert("You can select one seat at a time !");
@@ -99,6 +99,27 @@ for(const item of seatContainBox){
             }
         }
         selected.push(e.target.innerText);
+        console.log(selected.length)
+    })
+}
+
+
+function coupon(){
+    const couponValue = document.getElementById("coupon-input");
+    const couponButton = document.getElementById("coupon-button");
+    couponValue.addEventListener("keyup", (e) => {
+        const couponVal = (e.target.value).toLowerCase();
+            if(seatNumbers === 4 && couponVal === "new15"){
+                couponButton.removeAttribute("disabled");
+                couponButton.addEventListener("click", () => {
+                    couponApply();
+                })
+            }else if(couponVal === "couple 20"){
+                couponButton.removeAttribute("disabled");
+                couponButton.addEventListener("click", () => {
+                    couponApplyCouple();
+                })
+            }
     })
 }
 
@@ -110,27 +131,12 @@ function couponApply(){
     finalGrandTotalPrice("grand-total", finalGrandTotal);
 }
 
-function coupon(){
-    const couponValue = document.getElementById("coupon-input");
-    const couponButton = document.getElementById("coupon-button");
-    couponValue.addEventListener("keyup", (e) => {
-        const couponVal = (e.target.value).toLowerCase();
-            if(seatNumbers === 4 && couponVal === "new15"){
-                couponButton.removeAttribute("disabled");
-                couponButton.addEventListener("click", () => {
-                    couponApply();
-                    // toHide("coupon-box");
-                    // const discountedPrice = totalPriceValue * 0.15;
-                    // const finalGrandTotal = totalPriceValue - discountedPrice;
-                    // discoutedPriceUpdate("discount-container", discountedPrice);
-                    // finalGrandTotalPrice("grand-total", finalGrandTotal);
-                })
-            }else if(couponVal === "couple 20"){
-                couponButton.addEventListener("click", () => {
-                    couponApply();
-                })
-            }
-    })
+function couponApplyCouple(){
+    toHide("coupon-box");
+    const discountedPrice = totalPriceValue * 0.20;
+    const finalGrandTotal = totalPriceValue - discountedPrice;
+    discoutedPriceUpdate("discount-container", discountedPrice);
+    finalGrandTotalPrice("grand-total", finalGrandTotal);
 }
 
 coupon()
