@@ -20,7 +20,7 @@
 </head> 
 <body>
     <!-- header section -->
-    <header class="  raleway-font flex justify-center mt-12 items-center">
+    <header id="header-container" class="  raleway-font flex justify-center mt-12 items-center">
         <nav class="w-[1171px] h-14 flex justify-between">
             <h1 class="text-4xl font-extrabold text-black">ANA-Ticket</h1>
             <ul class="text-xl font-medium text-[#030712B3] flex gap-14 p-3">
@@ -36,7 +36,7 @@
         </nav>
     </header>
 
-    <main class="">
+    <main id="main" class="">
 
         <!-- banner section -->
         <section class="raleway-font relative mt-16">
@@ -386,37 +386,39 @@
                                 <div class="inter-font flex items-center justify-between">
                                     <div class="text-[18px] font-medium text-black flex items-center gap-1">
                                         Seat 
-                                        <p class="w-[24px] h-[18px] flex justify-center rounded-xl items-center text-white bg-green-600">2</p>
+                                        <p class="w-[24px] h-[18px] flex justify-center rounded-xl items-center text-white bg-green-600"><span id="selected-seats-number">0</span></p>
                                     </div>
                                     <span class="text-[16px] text-black font-medium">Class</span>
                                     <span class="text-[16px] text-black font-medium">Price</span>
                                 </div>
 
-                                <hr class="border-[1px] border-dashed w-[95%] mx-auto">
+                                <hr class="border-[1px] border-dashed w-[95%] -mt-5 mx-auto">
 
                                 <!--ticket displaying section  -->
-                                <div>
+                                <div id="displaying-selected-ticket">
+                                    
                                 </div>
 
                                 <hr class="border-black opacity-[50%] w-[95%] mx-auto">
                                 <!-- total price displaying section -->
                                 <div class="flex items-center justify-between">
                                     <p class="text-[18px] font-bold text-black">Total Price</p>
-                                    <p class="text-[18px] font-bold text-black">BDT <span class="text-2xl">1100</span> </p>
+                                    <p class="text-[18px] font-bold text-black">BDT <span id="total-price" class="text-2xl">0</span> </p>
                                 </div>
-
+                                <div id="discount-container" class="flex text-[18px] font-medium text-black justify-between">
+                                </div>
                                 <!-- coupon applying input section -->
-                                <div class="w-full h-[55px] bg-white hover:bg-white flex items-center justify-evenly px-3 rounded-lg">
+                                <div id="coupon-box" class="w-full h-[55px] bg-white hover:bg-white flex items-center justify-evenly px-3 rounded-lg">
                                     
-                                    <input class="outline-none border-none flex-1 h-[96%]" type="text" placeholder="Have any coupon" >
-                                    <button class="bg-[#1DD100] hover:bg-[#1DD100CC] btn text-white text-[16px] font-medium" disabled>Apply</button>
+                                    <input id="coupon-input" class="outline-none border-none flex-1 h-[96%]" type="text" placeholder="Have any coupon" >
+                                    <button id="coupon-button" class="bg-[#1DD100] hover:bg-[#1DD100CC] btn text-white text-[16px] font-medium" disabled>Apply</button>
                                     
                                 </div>
 
                                 <!-- Grand totall Section -->
                                 <div class="text-[16px] font-medium text-black flex items-center justify-between">
                                     <p class="text-[18px] font-bold">Grand Total</p>
-                                    <p class="text-[18px] font-bold text-black">BDT <span class="text-2xl"> 1100</span></p>
+                                    <p class="text-[18px] font-bold text-black">BDT <span id="grand-total" class="text-2xl">0</span></p>
                                 </div>
                       </div>
 
@@ -428,13 +430,13 @@
                             </label>
                             <label class="flex flex-col gap-4">
                                 <h2 class="text-[18px] text-black font-bold">Phone Number*</h2>
-                                <input class=" w-full h-[55px] px-4 border-2 outline-none rounded-lg bg-white" type="number" placeholder="Enter your phone number">
+                                <input id="number-input" class=" w-full h-[55px] px-4 border-2 outline-none rounded-lg bg-white" type="number" placeholder="Enter your phone number">
                             </label>
                             <label class="flex flex-col gap-4">
                                 <h2 class="text-[18px] text-black font-bold">Email id</h2>
                                 <input class=" w-full h-[55px] px-4 border-2 outline-none rounded-lg bg-white" type="email" placeholder="Enter your email id" >
                             </label>
-                            <button class="btn w-full bg-[#1DD100] text-white text-xl font-bold" disabled>Next</button>
+                            <button onclick="visibleSuccess('success-container')" id="next-button" class="btn w-full bg-[#1DD100] text-white text-xl font-bold" disabled>Next</button>
                             <div class="flex items-center justify-evenly">
                                 <a class="underline" href="#">Terms and Conditions</a>
                                 <a class="underline" href="#">Cancellation Policy</a>
@@ -447,7 +449,7 @@
         </section>
 
     </main>
-    <footer class="bg-black h-[450px] flex flex-col p-32 gap-6">
+    <footer id="footer-container" class="bg-black h-[450px] flex flex-col p-32 gap-6">
         <section class="flex items-center justify-between">
             <div class="flex flex-col gap-6">
                 <h2 class="text-4xl font-extrabold text-white raleway-font">ANA-Ticket</h2>
@@ -475,7 +477,7 @@
         </section>
     </footer>
 
-    <section class="w-full hidden h-screen flex items-center justify-center">
+    <section id="success-container" class="w-full hidden h-screen flex items-center justify-center">
         <div class="w-[718px] h-[481px] rounded-2xl bg-slate-50 flex flex-col items-center justify-center gap-5">
             <div>
                 <img src="images/success.png" alt="">

@@ -6,3 +6,20 @@
 .raleway-font {
     font-family: "Raleway", sans-serif;
 }
+
+#displaying-selected-ticket div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    opacity: 0.7;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.span {
+    position: relative;
+    left: 23px;
+}
