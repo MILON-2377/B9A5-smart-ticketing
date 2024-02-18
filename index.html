@@ -17,6 +17,9 @@
     <!-- css link -->
     <link rel="stylesheet" href="styles/style.css">
 
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head> 
 <body>
     <!-- header section -->
@@ -217,7 +220,7 @@
 
                             <hr class="border-dashed border-[1px]">
 
-                        <!-- availbe and Selected selction -->
+                        <!-- avaible and Selected selction -->
                             <div class="flex justify-between">
                                 <div class="flex items-center gap-2 justify-between">
                                     <div>
@@ -236,7 +239,8 @@
                             <hr class="border-dashed border-[1px]">
 
                             <section class="w-full">
-                                    <div class="w-[110px] h-[56px] bg-gray-200 rounded-[12px] float-right">
+                                    <div class="w-[110px] h-[56px] bg-gray-100 rounded-[12px] float-right flex items-center justify-center">
+                                        <i class="fa-solid fa-baseball text-4xl"></i>
                                     </div>
                         </section>
                          </section>
@@ -403,14 +407,14 @@
                                 <!-- total price displaying section -->
                                 <div class="flex items-center justify-between">
                                     <p class="text-[18px] font-bold text-black">Total Price</p>
-                                    <p class="text-[18px] font-bold text-black">BDT <span id="total-price" class="text-2xl">0</span> </p>
+                                    <p class="text-[18px] font-bold text-black">BDT <span id="total-price" class="text-2xl font-semibold">0</span> </p>
                                 </div>
                                 <div id="discount-container" class="flex text-[18px] font-medium text-black justify-between">
                                 </div>
                                 <!-- coupon applying input section -->
                                 <div id="coupon-box" class="w-full h-[55px] bg-white hover:bg-white flex items-center justify-evenly px-3 rounded-lg">
                                     
-                                    <input id="coupon-input" class="outline-none border-none flex-1 h-[96%]" type="text" placeholder="Have any coupon" >
+                                    <input id="coupon-input" class="outline-none active:bg-white border-none flex-1 h-[96%]" type="text" placeholder="Have any coupon" >
                                     <button id="coupon-button" class="bg-[#1DD100] hover:bg-[#1DD100CC] btn text-white text-[16px] font-medium" disabled>Apply</button>
                                     
                                 </div>
@@ -418,7 +422,7 @@
                                 <!-- Grand totall Section -->
                                 <div class="text-[16px] font-medium text-black flex items-center justify-between">
                                     <p class="text-[18px] font-bold">Grand Total</p>
-                                    <p class="text-[18px] font-bold text-black">BDT <span id="grand-total" class="text-2xl">0</span></p>
+                                    <p class="text-[18px] font-bold text-black">BDT <span id="grand-total" class="text-2xl font-semibold">0</span></p>
                                 </div>
                       </div>
 

@@ -85,7 +85,7 @@ const selected = [];
 let seatNumbers;
 for(const item of seatContainBox){
     item.addEventListener("click", (e) => {
-        if(e.target.classList[0] === "btn" && selected.length <= 3){
+        if(e.target.classList[0] === "btn" && !selected.includes(e.target.innerText) && selected.length <= 3){
             e.target.classList.add("bg-[#1DD100]");
             if(selected.includes(e.target.innerText)){
                alert("You can select one seat at a time !");
@@ -97,9 +97,8 @@ for(const item of seatContainBox){
                 updateTotalPrice("total-price");
                 updateTotalPrice("grand-total");
             }
+            selected.push(e.target.innerText);
         }
-        selected.push(e.target.innerText);
-        console.log(selected.length)
     })
 }
 
@@ -114,11 +113,13 @@ function coupon(){
                 couponButton.addEventListener("click", () => {
                     couponApply();
                 })
-            }else if(couponVal === "couple 20"){
+            }else if(seatNumbers === 4 && couponVal === "couple 20"){
                 couponButton.removeAttribute("disabled");
                 couponButton.addEventListener("click", () => {
-                    couponApplyCouple();
+                    couponApplyCouple();8
                 })
+            }else{
+                alert("Please use the valid coupon code !")
             }
     })
 }
