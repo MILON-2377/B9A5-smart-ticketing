@@ -23,10 +23,10 @@
 </head> 
 <body>
     <!-- header section -->
-    <header id="header-container" class="  raleway-font flex justify-center mt-12 items-center">
-        <nav class="w-[1171px] h-14 flex justify-between">
+    <header id="header-container" class=" raleway-font lg:flex justify-center mt-12 lg:items-center">
+        <nav class=" lg:w-[1171px] w-[95%] mx-auto h-14 flex justify-between">
             <h1 class="text-4xl font-extrabold text-black">ANA-Ticket</h1>
-            <ul class="text-xl font-medium text-[#030712B3] flex gap-14 p-3">
+            <ul class="hidden lg:flex text-xl font-medium text-[#030712B3] gap-14 p-3">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Destination</a></li>
@@ -43,20 +43,20 @@
 
         <!-- banner section -->
         <section class="raleway-font relative mt-16">
-            <div class="w-[1171px] h-[550px] rounded-[32px] bg-[url('images/banner.png')] bg-no-repeat bg-cover mx-auto flex flex-col items-center gap-10 z-10">
+            <div class="lg:w-[1171px] w-[95%] h-[550px] rounded-[32px] bg-[url('images/banner.png')] bg-no-repeat bg-cover mx-auto flex flex-col items-center gap-10 z-10">
                 
-                <h1 class="text-6xl font-extrabold text-white mt-16">End-to-End Travel with</h1>
-                <h2 class="text-6xl font-extrabold text-[#1DD100]">P Paribahan</h2>
+                <h1 class="lg:text-6xl text-3xl font-extrabold text-white mt-16">End-to-End Travel with</h1>
+                <h2 class="lg:text-6xl text-4xl font-extrabold text-[#1DD100]">ANA Paribahan</h2>
                 <p class="inter-font text-[18px] text-white">Something about p paribahan</p>
                 
                 <button id="buy-ticket" class="btn text-xl font-bold text-black bg-[#1DD100] w-44 h-16 rounded-xl">Buy Tickets</button>
             </div>
 
              <!-- displaying the sold tickets and registered users numbers -->
-            <div class="w-[971px] h-[138px] inter-font flex gap-5 mx-auto relative z-20 -top-[84px]">
+            <div class="lg:w-[971px] lg:h-[138px] inter-font flex flex-col lg:flex-row gap-5 mx-auto lg:relative lg:z-20 lg:-top-[84px] mt-7">
 
                 <!-- registered user details card 1 -->
-                <div class="w-72 h-32 bg-white rounded-3xl flex items-center gap-3 justify-center border-b-2 border-[#1DD100]">
+                <div class="lg:w-72 w-[95%] h-40 mx-auto lg:h-32 bg-white rounded-3xl flex items-center gap-3 justify-center lg:border-b-2 border-t-2 border-[#1DD100]">
                     <div class="w-16 h-16 ">
                         <img src="images/people.png" alt="">
                     </div>
@@ -67,7 +67,7 @@
                 </div>
     
                 <!-- tickets sold details card 2 -->
-                <div class="w-72 h-32 bg-white rounded-3xl flex items-center justify-center gap-3 border-b-2 border-[#1DD100]">
+                <div class="lg:w-72 w-[95%] h-40 mx-auto lg:h-32 bg-white rounded-3xl flex items-center justify-center gap-3 lg:border-b-2 border-t-2 border-[#1DD100]">
                     <div class="w-16 h-16 ">
                         <img src="images/ticket-cupon.png" alt="">
                     </div>
@@ -78,7 +78,7 @@
                 </div>
     
                 <!-- Rental partners details card 3 -->
-                <div class="w-72 h-32 bg-white rounded-3xl flex items-center justify-center gap-3 border-b-2 border-[#1DD100]">
+                <div class="lg:w-72 w-[95%] h-40 mx-auto lg:h-32 bg-white rounded-3xl flex items-center justify-center gap-3 lg:border-b-2 border-t-2 border-[#1DD100]">
                     <div class="w-16 h-16 ">
                         <img src="images/stoppage.png" alt="">
                     </div>
@@ -97,30 +97,34 @@
                 <h2 class="raleway-font text-[40px] font-bold text-black">Best offers for you</h2>
 
                 <!-- coupon cards section -->
-                <div class="flex gap-5">
-                    <div class="w-[573px] h-[220px] rounded-xl bg-[#FFBF0F] flex justify-evenly">
-                        <div class="inter-font flex flex-col items-center justify-center gap-2 ">
-                            <h2 class="text-[40px] text-[#030712] font-bold">15% OFF</h2>
+                <div class="flex lg:flex-row flex-col gap-5">
+                    <div class="lg:w-[573px] w-[95%] mx-auto h-[220px] rounded-xl bg-[#FFBF0F] flex justify-evenly">
+                        <div class="inter-font flex flex-col lg:items-center justify-center gap-2 px-2 lg:px-0 ">
+                            <h2 class="lg:text-[40px] text-[32px] text-[#030712] font-bold ">15% OFF</h2>
                             <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
                             <p class="text-[18px] font-medium text-[#03071280]">use by January 2024</p>
                         </div>
-                        <div class=" inter-font flex flex-col items-center justify-center gap-2">
-                            <h2 class="text-3xl text-[#030712CC] font-bold">NEW<sub>15</sub> </h2>
+                        <div class=" flex items-center lg:justify-end ml-3 lg:ml-0">
+                            <img src="images/cupon-devider.png" class="h-full">
+                        </div>
+                        <div class=" inter-font flex flex-col lg:items-center justify-center gap-2">
+                            <h2 class="text-3xl text-[#030712CC] font-bold -mt-7 lg:-mt-0">NEW<sub>15</sub> </h2>
                             <p class="text-xl font-medium text-[#03071266]">Coupon Code</p>
                         </div>
                     </div>
-                    <div class="w-[573px] h-[220px] rounded-xl bg-[#F78C9C] flex justify-evenly">
-                        <div class="inter-font flex flex-col items-center justify-center gap-2 ">
-                            <h2 class="text-[40px] text-[#030712] font-bold">20% OFF</h2>
+
+                    <div class="lg:w-[573px] w-[95%] mx-auto h-[220px] rounded-xl bg-[#F78C9C] flex justify-evenly">
+                        <div class="inter-font flex flex-col lg:items-center justify-center gap-2 px-2 lg:px-0 ">
+                            <h2 class="lg:text-[40px] text-[32px] text-[#030712] font-bold">20% OFF</h2>
                             <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
                             <p class="text-[18px] font-medium text-[#03071280]">use by January 2024</p>
                         </div>
                         <div class=" flex items-center justify-end">
                             <img src="images/cupon-devider.png" class="h-full">
                         </div>
-                        <div class="raleway-font flex flex-col items-center justify-center gap-2">
-                            <h2 class="text-[32px] text-[#030712CC] font-bold">Couple 20</h2>
-                            <p class="text-xl font-medium text-[#03071266]">Coupon Code</p>
+                        <div class="raleway-font flex flex-col lg:items-center justify-center gap-2">
+                            <h2 class="lg:text-[32px] text-[25px] text-[#030712CC] font-bold">Couple 20</h2>
+                            <p class="text-xl font-medium text-[#03071266] -ml-2 lg:-ml-0">Coupon Code</p>
                         </div>
                     </div>
     
@@ -131,25 +135,25 @@
         </section>
 
          <!-- dsecription section about transport -->
-        <section class="h-[1880px] border-t-2 border-[#1DD100] bg-gray-100 rounded-[50px] mt-16 p-5">
-            <div class="raleway-font flex flex-col items-center justify-center mx-auto mt-14">
-                <h2 class="text-[40px] font-bold text-black">P.H Paribahan</h2>
-                <p class="inter-font text-[18px] text-[#03071299] w-[800px] ">P.H. Paribahan is a prominent transportation company operating in Bangladesh. Specializing in bus services, it provides both intercity and intracity transportation solutions. With a reputation for reliability and efficiency, P.H. Paribahan offers a wide range of routes connecting major cities and towns across the country</p>
+        <section class="h-[1880px] border-t-2 border-[#1DD100] bg-gray-100 rounded-[50px] lg:mt-16 mt-7 p-5">
+            <div class="raleway-font w-[95%] lg:w-full flex flex-col items-center justify-center mx-auto lg:mt-14">
+                <h2 class="text-[40px] font-bold text-black">ANA Paribahan</h2>
+                <p class="inter-font text-[18px] text-[#03071299] lg:w-[800px] text-center">ANA Paribahan is a prominent transportation company operating in Bangladesh. Specializing in bus services, it provides both intercity and intracity transportation solutions. With a reputation for reliability and efficiency, P.H. Paribahan offers a wide range of routes connecting major cities and towns across the country</p>
             </div>
 
         <!-- bus ticket seat booking and purchase section -->
-            <section>
-                <div class="w-[1171px] h-[418px] bg-white rounded-[24px] mx-auto flex items-center justify-evenly mt-12 ">
-                            <!-- bus logo and bus name container -->
+            <section class="">
+                <div class="lg:w-[1171px] lg:h-[418px] bg-white rounded-[24px] mx-auto flex flex-col lg:flex-row items-center justify-evenly mt-12 ">
+                    <!-- bus logo and bus name container -->
                     <div class="flex flex-col justify-evenly gap-5">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <div class="flex items-center justify-center">
-                                    <img src="images/bus-logo.png" class="">
+                        <div class="flex lg:items-center justify-between gap-7 lg:gap-0 p-2 lg:p-0 mt-2 lg:mt-0">
+                            <div class="flex flex-col lg:flex-row justify-between lg:items-center gap-1 lg:gap-3">
+                                <div class="flex items-center lg:justify-center">
+                                    <img src="images/bus-logo.png" class="w-11 h-6 lg:h-full lg:w-full">
                                 </div>
-                                <div class="raleway-font flex flex-col items-center justify-center gap-1">
-                                    <h2 class="text-3xl font-bold text-black">Greenline Paribahan</h2>
-                                    <p class="inter-font text-[18px] float-start text-[#03071299]">Coah-09-WEB ! AC Business</p>
+                                <div class="raleway-font flex flex-col lg:items-center justify-center lg:gap-1">
+                                    <h2 class="lg:text-3xl text-[11px] font-bold text-black">Greenline Paribahan</h2>
+                                    <p class="inter-font lg:text-[18px] text-[8px] float-start text-[#03071299]">Coah-09-WEB ! AC Business</p>
                                 </div>
                             </div>
             
@@ -165,7 +169,7 @@
                             </div>
                         </div>
             
-                        <div class="w-[808px] h-[258px] rounded-[24px] bg-[#F7F8F8] flex flex-col justify-evenly p-6">
+                        <div class="lg:w-[808px] w-full lg:h-[258px] rounded-[24px] bg-[#F7F8F8] flex flex-col gap-5 justify-evenly p-3 lg:p-6">
                             <div class="raleway-font text-[18px] font-semibold text-[#03071299] flex items-center justify-between">
                                 <p class="">Route</p>
                                 <p class="font-bold text-black">Dhaka-Sylet</p>
@@ -180,28 +184,28 @@
             
                             <hr class="border-dashed border-[1px]">
             
-                            <div class="grid grid-cols-3 gap-4">
+                            <div class="grid lg:grid-cols-3 gap-4">
                                 <div class="h-[56px] bg-gray-200 rounded-xl flex items-center justify-center">
-                                    <p>Boarding Point - Laxmipur</p>
+                                    <p class="text-xl lg:text-base">Boarding Point - Laxmipur</p>
                                 </div>
                                 <div class="h-[56px] bg-gray-200 rounded-xl flex items-center justify-center">
-                                    <p>Dropping Point - bogura</p>
+                                    <p class="text-xl lg:text-base">Dropping Point - bogura</p>
                                 </div>
                                 <div class="h-[56px] bg-gray-200 rounded-xl flex items-center justify-center">
-                                    <p>Est. Time - 11 Hour</p>
+                                    <p class="text-xl lg:text-base">Est. Time - 11 Hour</p>
                                 </div>
                             </div>
                         </div>
                     </div>
         
                 <!-- divider section -->
-                    <div>
-                        <img src="images/info-devider.png">
+                    <div class="hidden lg:h-full w-[6%] lg:block">
+                        <img src="images/info-devider.png" class="h-full w-full">
                     </div>
         
-                    <div class="flex flex-col items-center justify-evenly">
+                    <div class="flex h-52 w-[85%] lg:w-[15%] lg:h-[40%] lg:bg-white bg-slate-50 rounded-xl mb-2 lg:mb-0 mt-2 lg:mt-0 flex-col items-center justify-evenly">
                         <div>
-                            <img src="images/fare.png" alt="">
+                            <img src="images/fare.png">
                         </div>
                         <p class="text-[32px] text-black font-bold raleway-font"><span class="italic">550</span> Taka</p>
                         <p class="text-[24px] font-semibold text-[#03071299]">Per Seat</p>
@@ -211,7 +215,7 @@
 
             <!-- seats container -->
             <section class="mt-6">
-                <div class="w-[1170px] flex gap-6 justify-between h-[1056px] bg-white raleway-font rounded-[24px] p-5 mx-auto">
+                <div class="lg:w-[1170px] flex gap-6 justify-between lg:h-[1056px] bg-white raleway-font rounded-[24px] p-5 mx-auto">
                    
                     <section id="seats-container" class="flex w-full flex-col gap-6 justify-between h-full">
                         <!-- select your section section -->

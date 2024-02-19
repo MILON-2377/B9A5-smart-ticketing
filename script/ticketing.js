@@ -66,7 +66,7 @@ function discoutedPriceUpdate(idName, value){
     const total = document.getElementById(idName);
 
     const p = document.createElement("p");
-    p.innerText = "Discounted";
+    p.innerText = "Discounted Price";
     const span = document.createElement("span");
     span.innerText = value;
 
@@ -116,7 +116,7 @@ function coupon(){
             }else if(seatNumbers === 4 && couponVal === "couple 20"){
                 couponButton.removeAttribute("disabled");
                 couponButton.addEventListener("click", () => {
-                    couponApplyCouple();8
+                    couponApplyCouple();
                 })
             }else{
                 alert("Please use the valid coupon code !")
